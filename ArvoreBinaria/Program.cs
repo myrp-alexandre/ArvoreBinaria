@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArvoreBinaria.Arvores;
+using System;
 
 namespace ArvoreBinaria
 {
@@ -10,21 +11,29 @@ namespace ArvoreBinaria
         {
             Arvore = new ArvoreBinaria();
 
-            while (true)
-            {
-                Console.WriteLine("Informe o Valor! Informe N para parar!");
-                var comando = Console.ReadLine();
-                if (comando.ToUpper() == "N")
-                {
-                    break;
-                }
+            //while (true)
+            //{
+            //    Console.WriteLine("Informe o Valor! Informe N para parar!");
+            //    var comando = Console.ReadLine();
+            //    if (comando.ToUpper() == "N")
+            //    {
+            //        break;
+            //    }
 
-                Arvore.Insere(long.Parse(comando));
-            }
-            Console.Clear();
-            Console.WriteLine("Qual número você deseja procurar?");
-            var procurado = Console.ReadLine();
-            Arvore.Percorrer(long.Parse(procurado));
+            //    Arvore.Insere(long.Parse(comando));
+            //    Console.Clear();
+            //}
+
+            Arvore.Insere(5);
+            Arvore.Insere(3);
+            Arvore.Insere(4);
+            Arvore.Insere(7);
+            Arvore.Insere(6);
+            Arvore.Insere(17);
+            Arvore.Insere(12);
+
+            Arvore.Listar(new EmLargura());
+            //Arvore.Procurar();
 
             Console.ReadKey();
         }
