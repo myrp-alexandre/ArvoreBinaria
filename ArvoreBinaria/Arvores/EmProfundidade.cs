@@ -2,7 +2,7 @@
 
 namespace ArvoreBinaria.Arvores
 {
-    public class EmProfundidade : IListar, IProcurar
+    public class EmProfundidade : IListar, IProcurar, IProcurarERetornar
     {
         public void Listar(Node raiz)
         {
@@ -40,6 +40,34 @@ namespace ArvoreBinaria.Arvores
             }
 
             return false;
+        }
+
+        public Node ProcurarERetornar(Node raiz, long procurado)
+        {
+            if (raiz == null)
+            {
+                return null;
+            }
+
+            if (raiz.Valor == procurado)
+            {
+                Console.WriteLine("Encontrado");
+                return raiz;
+            }
+
+            var resultado = ProcurarERetornar(raiz.Esquerda, procurado);
+            if (resultado != null)
+            {
+                return resultado;
+            }
+
+            resultado = ProcurarERetornar(raiz.Direita, procurado);
+            if (resultado != null)
+            {
+                return resultado;
+            }
+
+            return null;
         }
     }
 }

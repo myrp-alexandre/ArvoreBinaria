@@ -32,8 +32,12 @@ namespace ArvoreBinaria
             Arvore.Insere(17);
             Arvore.Insere(12);
 
-            Arvore.Listar(new EmLargura());
-            //Arvore.Procurar();
+            Arvore.Listar(new EmProfundidade());
+            Console.WriteLine("---------------------");
+            Arvore.RemoverNode(7);
+            Console.WriteLine("---------------------");
+
+            Arvore.Listar(new EmProfundidade());
 
             Console.ReadKey();
         }
