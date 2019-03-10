@@ -13,7 +13,7 @@ namespace ArvoreBinaria
             Valor = novoValor;
         }
 
-        public bool Insere(long valorNovo)
+        public bool Insere(long valorNovo, Node Pai = null)
         {
             if (valorNovo == Valor)
             {

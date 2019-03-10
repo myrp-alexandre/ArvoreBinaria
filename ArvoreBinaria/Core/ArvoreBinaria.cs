@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ArvoreBinaria
 {
@@ -18,7 +20,7 @@ namespace ArvoreBinaria
             }
             else
             {
-                return Raiz.Insere(newValue);
+                return Raiz.Insere(newValue, Raiz);
             }
         }
 
