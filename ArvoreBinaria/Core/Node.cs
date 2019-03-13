@@ -21,7 +21,7 @@ namespace ArvoreBinaria
             Pai = pai;
         }
 
-        public bool Insere(long valorNovo, Node Pai)
+        public bool Insere(long valorNovo, Node pai)
         {
             if (valorNovo == Valor)
             {
@@ -33,7 +33,7 @@ namespace ArvoreBinaria
                 {
                     if (Esquerda == null)
                     {
-                        Esquerda = new Node(valorNovo, Pai);
+                        Esquerda = new Node(valorNovo, pai);
                         Console.WriteLine("Inserido " + valorNovo + " a esquerda!");
                     }
                     else
@@ -45,7 +45,7 @@ namespace ArvoreBinaria
                 {
                     if (Direita == null)
                     {
-                        Direita = new Node(valorNovo, Pai);
+                        Direita = new Node(valorNovo, pai);
                         Console.WriteLine("Inserido " + valorNovo + " a direita!");
                     }
                     else
